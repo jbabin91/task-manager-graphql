@@ -32,10 +32,12 @@ services:
       PGADMIN_DEFAULT_EMAIL: jbabin91@gmail.com
       PGADMIN_DEFAULT_PASSWORD: pgadmin
     volumes:
-      - pgadmin:/root/.pgadmin
+      - pgadmin:/usr/lib/pgadmin
+      - pgservers:/pgadmin4
     ports:
       - 5050:80
 
 volumes:
   postgres:
   pgadmin:
+  pgservers:

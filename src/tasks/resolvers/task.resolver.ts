@@ -1,7 +1,7 @@
 import { Resolver, Mutation, Args, Query } from '@nestjs/graphql';
 
 import { TasksService } from '../tasks.service';
-import { Task } from '../entities/tasks.entity';
+import { Task } from '../entities/task.entity';
 import { CreateTaskDto } from '../dtos/CreateTask.dto';
 
 @Resolver()

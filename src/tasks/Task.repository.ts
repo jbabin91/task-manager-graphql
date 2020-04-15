@@ -2,7 +2,7 @@ import { InternalServerErrorException } from '@nestjs/common';
 import { EntityRepository, Repository } from 'typeorm';
 
 import { CreateTaskDto } from './dtos/CreateTask.dto';
-import { Task } from './entities/tasks.entity';
+import { Task } from './entities/task.entity';
 import { TaskStatus } from './enums/TaskStatus';
 
 @EntityRepository(Task)
