@@ -7,6 +7,12 @@ import { CreateTaskDto } from '../dtos/CreateTask.dto';
 @Resolver()
 export class TasksResolver {
   constructor(private tasksService: TasksService) {}
+
+  @Query(() => [Task])
+  async getTasks(): Promise<Task[]> {
+    return this.tasksService.getTasks();
+  }
+
   @Mutation(() => Task)
   async createTask(@Args('input') createTaskDto: CreateTaskDto): Promise<Task> {
     return this.tasksService.createTask(createTaskDto);

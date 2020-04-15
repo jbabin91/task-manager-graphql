@@ -7,6 +7,10 @@ import { Task } from './entities/tasks.entity';
 export class TasksService {
   constructor(private taskRepository: TaskRepository) {}
 
+  async getTasks(): Promise<Task[]> {
+    return await this.taskRepository.getTasks();
+  }
+
   async createTask(createTaskDto: CreateTaskDto): Promise<Task> {
     return await this.taskRepository.createTask(createTaskDto);
   }

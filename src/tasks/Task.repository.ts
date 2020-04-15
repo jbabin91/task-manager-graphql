@@ -1,12 +1,18 @@
 import { InternalServerErrorException } from '@nestjs/common';
 import { EntityRepository, Repository } from 'typeorm';
 
-import { Task } from './entities/tasks.entity';
 import { CreateTaskDto } from './dtos/CreateTask.dto';
+import { Task } from './entities/tasks.entity';
 import { TaskStatus } from './enums/TaskStatus';
 
 @EntityRepository(Task)
 export class TaskRepository extends Repository<Task> {
+  async getTasks(): Promise<Task[]> {
+    const query = this.createQueryBuilder('task');
+    const tasks = await query.getMany();
+
+    return tasks;
+  }
   async createTask({ title, description }: CreateTaskDto): Promise<Task> {
     const task = this.create({
       title,
