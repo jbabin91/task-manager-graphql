@@ -23,5 +23,7 @@ cd task-manager-graphql && npm install
 docker-compose up --build -d
 ```
 
-Access [GraphQL Playground](http://localhost:3000/graphql)
-Access [PGAdmin](http://localhost:5050)
+## Working with the App
+
+- Access [GraphQL Playground](http://localhost:3000/graphql)
+- Access [PGAdmin](http://localhost:5050)
