@@ -1,6 +1,6 @@
 # NestJS Task Management
 
-A task management application build using NestJS, GraphQL, TypeScript.
+A task management application build using NestJS, GraphQL, and TypeScript
 
 ## Setting up your development environment
 
@@ -9,6 +9,7 @@ The steps to setting up this app are real simple, but please make sure you have 
 - [Node](https://nodejs.org)
 - [Docker](https://www.docker.com)
 - [Docker-Compose](https://docs.docker.com/compose)
+- [GraphQL](https://graphql.org)
 
 ## Clone Repo and Install Packages
 

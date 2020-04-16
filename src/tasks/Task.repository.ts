@@ -1,7 +1,7 @@
 import { InternalServerErrorException } from '@nestjs/common';
 import { EntityRepository, Repository } from 'typeorm';
 
-import { CreateTaskDto } from './dtos/CreateTask.dto';
+import { CreateTaskDto } from './dtos/create-task.dto';
 import { Task } from './entities/task.entity';
 import { TaskStatus } from './enums/TaskStatus';
 
@@ -13,6 +13,7 @@ export class TaskRepository extends Repository<Task> {
 
     return tasks;
   }
+
   async createTask({ title, description }: CreateTaskDto): Promise<Task> {
     const task = this.create({
       title,
